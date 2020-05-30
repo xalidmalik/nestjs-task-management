@@ -1,0 +1,8 @@
+db:
+  host: 'localhost'
+  username: 'psotgres'
+  password: '12345'
+  synchhronize: true
+
+jwt:
+  secret: 'topSecret51'
