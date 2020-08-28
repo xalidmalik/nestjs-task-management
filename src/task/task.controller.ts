@@ -52,6 +52,7 @@ export class TaskController {
   ): Promise<Task> {
     return this.taskService.getTaskById(id, user);
   }
+
   @Post()
   @UsePipes(ValidationPipe)
   createTask(
@@ -60,6 +61,7 @@ export class TaskController {
   ): Promise<Task> {
     return this.taskService.createTask(createTaskDto, user);
   }
+
   @Delete('/:id')
   deleteTask(
     @Param('id', ParseIntPipe) id: number,
@@ -67,6 +69,7 @@ export class TaskController {
   ): Promise<void> {
     return this.taskService.deleteTask(id, user);
   }
+  
   @Patch('/:id/status')
   updateTaskStatus(
     @Param('id', ParseIntPipe) id: number,
